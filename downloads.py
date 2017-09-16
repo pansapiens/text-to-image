@@ -103,7 +103,8 @@ def unzip(src_dir,new_name = None):
 		raise('wrong format')
 
 def main():
-	url = "http://www.robots.ox.ac.uk/~vgg/data/flowers/102/102flowers.tgz"
+	os.system('python3 -m nltk.downloader punkt')
+        url = "http://www.robots.ox.ac.uk/~vgg/data/flowers/102/102flowers.tgz"
 	cur_dir = os.getcwd()
 	image_dir = os.path.join(cur_dir,"102flowers.tgz")
 	if os.path.exists(image_dir):
